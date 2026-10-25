@@ -1,0 +1,19 @@
+{
+  "name": "nikunj-textiles-yash",
+  "version": "1.0.0",
+  "description": "Nikunj Textiles (Brand Yash) - Official Online Garments Store",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static assets ready for deployment'"
+  },
+  "keywords": [
+    "nikunj-textiles",
+    "yash",
+    "innerwear",
+    "garments",
+    "store",
+    "ecommerce"
+  ],
+  "author": "Nikunj Textiles",
+  "license": "UNLICENSED"
+}

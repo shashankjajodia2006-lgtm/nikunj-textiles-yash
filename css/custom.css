@@ -1,0 +1,206 @@
+/* Nikunj Textiles - Yash Brand Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --yash-red: #CD221B;
+  --yash-red-hover: #b31b15;
+  --yash-red-dark: #8c140f;
+  --yash-red-light: #fef2f2;
+  --yash-red-subtle: #fee2e2;
+  --yash-navy: #0e2a5a;
+  --yash-navy-light: #1e3a8a;
+  --yash-blue: #0066b2;
+  --yash-gold: #eab308;
+  --yash-gold-dark: #ca8a04;
+  --yash-gray-50: #f8fafc;
+  --yash-gray-100: #f1f5f9;
+  --yash-gray-200: #e2e8f0;
+  --yash-gray-800: #1e293b;
+  --yash-gray-900: #0f172a;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Primary Brand Color Classes */
+.bg-yash-red {
+  background-color: var(--yash-red);
+}
+
+.text-yash-red {
+  color: var(--yash-red);
+}
+
+.border-yash-red {
+  border-color: var(--yash-red);
+}
+
+.hover\:bg-yash-red-hover:hover {
+  background-color: var(--yash-red-hover);
+}
+
+/* Red Banner Ribbon Styling (Faithful to Yash official logo) */
+.yash-ribbon {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  position: relative;
+  box-shadow: 0 4px 14px rgba(205, 34, 27, 0.35);
+}
+
+.yash-ribbon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: inherit;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yash-red);
+}
+
+/* Product Card Styling */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.12), 0 6px 12px -4px rgba(205, 34, 27, 0.08);
+}
+
+.product-image-container {
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+}
+
+.product-image-container img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.06);
+}
+
+/* Size Pill Selector */
+.size-pill {
+  transition: all 0.2s ease;
+}
+
+.size-pill.active {
+  background-color: var(--yash-red);
+  color: white;
+  border-color: var(--yash-red);
+  box-shadow: 0 2px 8px rgba(205, 34, 27, 0.3);
+}
+
+/* Cart Badge Pulse */
+@keyframes badge-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.badge-pop {
+  animation: badge-pop 0.3s ease-out;
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  animation: toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Transitions */
+.modal-overlay {
+  transition: opacity 0.3s ease;
+}
+
+.modal-content-box {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+/* Matrix Table for B2B Order */
+.matrix-input:focus {
+  outline: none;
+  border-color: var(--yash-red);
+  box-shadow: 0 0 0 3px rgba(205, 34, 27, 0.15);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  animation: pulse-wa 2.5s infinite;
+}
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Print Styles for Invoices & B2B Orders */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice, #printable-invoice * {
+    visibility: visible;
+  }
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+}

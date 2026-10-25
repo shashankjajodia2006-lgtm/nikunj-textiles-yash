@@ -108,7 +108,23 @@ The server will start at `http://localhost:8080/` and open automatically.
 
 ---
 
-## 🌐 Vercel Deployment Guide
+## 🚀 Publishing to GoDaddy Hosting (`nikunjtextiles.com`)
+
+A complete production deployment bundle has been created at:
+- **ZIP File:** [`nikunjtextiles_website.zip`](./nikunjtextiles_website.zip)
+
+### Steps to Upload via GoDaddy cPanel (2-Minute Deployment):
+1. **Log In to GoDaddy:** Go to [account.godaddy.com](https://account.godaddy.com/) and navigate to **My Products**.
+2. **Open cPanel:** Under **Web Hosting**, click **Manage** > **cPanel Admin**.
+3. **Open File Manager:** Click on **File Manager** (under the **Files** section).
+4. **Go to `public_html`:** Double-click the `public_html` directory (the root folder for `nikunjtextiles.com`).
+5. **Upload the ZIP:** Click **Upload** in the top navigation bar, and upload `nikunjtextiles_website.zip`.
+6. **Extract:** Right-click `nikunjtextiles_website.zip` inside `public_html` and click **Extract**.
+7. **Done:** Your website is instantly live at **[https://nikunjtextiles.com](https://nikunjtextiles.com)**!
+
+---
+
+## 🌐 Alternative: Vercel Deployment Guide
 
 The project is fully pre-configured for Vercel with [`vercel.json`](./vercel.json), [`package.json`](./package.json), and [`.gitignore`](./.gitignore).
 

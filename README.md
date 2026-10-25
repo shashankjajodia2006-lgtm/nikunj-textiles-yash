@@ -108,6 +108,28 @@ The server will start at `http://localhost:8080/` and open automatically.
 
 ---
 
+## 🌐 Vercel Deployment Guide
+
+The project is fully pre-configured for Vercel with [`vercel.json`](./vercel.json), [`package.json`](./package.json), and [`.gitignore`](./.gitignore).
+
+### Step 1: Create a GitHub Repository
+1. Go to [github.com/new](https://github.com/new) and create a repository (e.g. `nikunj-textiles-yash`).
+2. Do not check "Add README" or `.gitignore` (they are already created).
+
+### Step 2: Push Code to GitHub
+Double click [`push-to-github.bat`](./push-to-github.bat) and enter your GitHub repository URL, or run:
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/nikunj-textiles-yash.git
+git push -u origin main
+```
+
+### Step 3: Deploy on Vercel
+1. Log in to [vercel.com](https://vercel.com) and click **"Add New..." > "Project"** (or visit [vercel.com/new](https://vercel.com/new)).
+2. Select your `nikunj-textiles-yash` repository and click **Import**.
+3. Click **Deploy**. Vercel will instantly generate a live production URL (e.g. `https://nikunj-textiles-yash.vercel.app`) with automatic HTTPS and global CDN caching.
+
+---
+
 ## 📞 Order & Wholesale Contact Desk
 - **WhatsApp for Orders:** [+91 94151 00235](https://wa.me/919415100235)
 - **Direct Phone:** +91 94151 00235
